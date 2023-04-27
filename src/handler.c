@@ -85,6 +85,11 @@ int receive_result(int sockfd) {
                  * As soon as a frame is received, you have to parse it
                  * accoringly and print the received value to stdout.
                  */
+                //print the read bytes
+                printf(">> Received %d bytes.\n", read_bytes);
+                /**
+                 * YOUR CODE HERE
+                 */
         } else {
             if (errno == EINTR) {
                 memset(recv_frame, 0, FRAME_SIZE * sizeof (uint8_t));
